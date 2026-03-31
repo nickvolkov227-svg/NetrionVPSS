@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NetrionVPS - Быстрый и стабильный интернет</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.5; }
+        }
+        .animate-pulse-slow {
+            animation: pulse-slow 4s ease-in-out infinite;
+        }
+        .delay-1000 {
+            animation-delay: 1s;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center gap-2">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-violet-600 flex items-center justify-center font-bold text-white">
+                        V
+                    </div>
+                    <span class="text-xl font-bold text-white">NetrionVPS</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="#features" class="text-gray-300 hover:text-white transition-colors">Преимущества</a>
+                    <a href="#pricing" class="text-gray-300 hover:text-white transition-colors">Тарифы</a>
+                    <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors">Отзывы</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+  <a 
+    href="https://t.me/stasgay77_bot" 
+    target="_blank"
+    class="px-6 py-2 bg-gradient-to-r from-purple-600 to-violet-600 rounded-lg font-semibold text-white hover:shadow-lg hover:shadow-purple-500/30 transition-all inline-block"
+  >
+    Подключить
+  </a>
+</div>
+
+                <!-- Mobile Menu Button -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-white p-2">
+                    <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="closeIcon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobileMenu" class="hidden md:hidden mt-4 pt-4 border-t border-gray-800 flex-col gap-4">
+                <a href="#features" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white transition-colors">Преимущества</a>
+                <a href="#pricing" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white transition-colors">Тарифы</a>
+                <a href="#testimonials" onclick="toggleMobileMenu()" class="text-gray-300 hover:text-white transition-colors">Отзывы</a>
+                <a href="https://t.me/stasgay77_bot" target="_blank"
+   class="group px-8 py-4 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl font-semibold text-white block text-center">
+    Подключить
+</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center px-4 overflow-hidden">
+        <!-- Gradient background -->
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-violet-900/10 to-transparent"></div>
+        
+        <!-- Animated gradient orbs -->
+        <div class="absolute top-20 left-1/4 w-96 h-96 bg-purple-500/30 rounded-full blur-[120px] animate-pulse"></div>
+        <div class="absolute bottom-20 right-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-[120px] animate-pulse-slow delay-1000"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto text-center">
+            <div class="inline-block mb-6 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20 backdrop-blur-sm">
+                <span class="text-purple-300 text-sm">⚡ Быстрее 24/7</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-violet-200 bg-clip-text text-transparent leading-tight">
+                Быстрый и стабильный<br>интернет без лагов
+            </h1>
+            
+            <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                Сервис для тех, кому важна скорость и стабильность.<br>
+                Подключение за 2 минуты.
+            </p>
+            
+            <a href="#pricing" class="group px-8 py-4 bg-gradient-to-r from-purple-600 to-violet-600 rounded-xl font-semibold text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/50 transition-all duration-300 hover:scale-105 inline-block">
+    <span class="flex items-center gap-2 justify-center">
+        Выбрать тариф
+        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+        </svg>
+    </span>
+</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Преимущества сервиса</h2>
+                <p class="text-gray-400 text-lg">Почему выбирают нас</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Feature 1 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+                    <div class="text-4xl mb-4">🚀</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">До 3x быстрее</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Современная инфраструктура обеспечивает невероятную скорость загрузки сайтов и видео</p>
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+                    <div class="text-4xl mb-4">🛡️</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">Защита 24/7</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Надежная защита от DDoS-атак и мошеннических сайтов по всему миру</p>
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+                    <div class="text-4xl mb-4">📡</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">Стабильность</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Гарантированная стабильность соединения без перегруженных сетей</p>
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
+                    <div class="text-4xl mb-4">⚡</div>
+                    <h3 class="text-xl font-bold text-white mb-3 group-hover:text-purple-300 transition-colors">2 минуты</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Мгновенное подключение — просто выберите тариф и начните пользоваться</p>
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 px-4 relative">
+        <!-- Background gradient -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/5 to-transparent"></div>
+        
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Тарифные планы</h2>
+                <p class="text-gray-400 text-lg">Выберите подходящий тариф для ваших задач</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Plan 1 - Базовый -->
+                <div class="relative p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105 bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 hover:border-purple-500/30">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Базовый</h3>
+                        <p class="text-gray-400 text-sm">Для личного использования</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold text-white">499</span>
+                            <span class="text-gray-400">₽/мес</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Скорость до 100 Мбит/с</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Безлимитный трафик</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Базовая защита</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">24/7 поддержка</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">1 устройство</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="buyPlan('basic')" class="w-full py-3 rounded-xl font-semibold transition-all duration-300 bg-gray-800 text-white hover:bg-gray-700 border border-gray-700">
+  Выбрать план
+                    </button>
+                </div>
+
+                <!-- Plan 2 - Про (Popular) -->
+                <div class="relative p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105 bg-gradient-to-br from-purple-600/20 to-violet-600/20 border-2 border-purple-500/50 shadow-xl shadow-purple-500/20">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-gradient-to-r from-purple-600 to-violet-600 rounded-full text-sm font-semibold text-white flex items-center gap-1 shadow-lg">
+                        <svg class="w-4 h-4 fill-white" viewBox="0 0 24 24">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                        Популярный
+                    </div>
+                    
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Про</h3>
+                        <p class="text-gray-400 text-sm">Для профессионалов</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold text-white">899</span>
+                            <span class="text-gray-400">₽/мес</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Скорость до 500 Мбит/с</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Безлимитный трафик</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Премиум защита</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Приоритетная поддержка</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">До 5 устройств</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Статистика использования</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="buyPlan('pro')" class="w-full py-3 rounded-xl font-semibold transition-all duration-300 bg-gradient-to-r from-purple-600 to-violet-600 text-white hover:shadow-lg">
+  Выбрать план
+                    </button>
+                </div>
+
+                <!-- Plan 3 - Бизнес -->
+                <div class="relative p-8 rounded-2xl backdrop-blur-sm transition-all duration-300 hover:scale-105 bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 hover:border-purple-500/30">
+                    <div class="mb-6">
+                        <h3 class="text-2xl font-bold text-white mb-2">Бизнес</h3>
+                        <p class="text-gray-400 text-sm">Для команд и компаний</p>
+                    </div>
+                    
+                    <div class="mb-6">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-5xl font-bold text-white">1499</span>
+                            <span class="text-gray-400">₽/мес</span>
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Скорость до 1 Гбит/с</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Безлимитный трафик</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Максимальная защита</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Персональный менеджер</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Неограниченные устройства</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">Расширенная аналитика</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-gray-300">
+                            <svg class="w-5 h-5 mt-0.5 flex-shrink-0 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-sm">SLA 99.9%</span>
+                        </li>
+                    </ul>
+                    
+                    <button onclick="buyPlan('business')" class="w-full py-3 rounded-xl font-semibold transition-all duration-300 bg-gray-800 text-white hover:bg-gray-700 border border-gray-700">
+  Выбрать план
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-white">Отзывы клиентов</h2>
+                <p class="text-gray-400 text-lg">Что говорят наши пользователи</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+                    <svg class="absolute top-4 right-4 w-8 h-8 text-purple-500/20 group-hover:text-purple-500/40 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="text-4xl">👨‍💻</div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white">Александр Петров</h4>
+                            <p class="text-sm text-gray-400">Веб-разработчик</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "Невероятная скорость! Работаю с тяжелыми проектами и загрузка файлов стала в разы быстрее. Рекомендую всем, кто работает удаленно."
+                    </p>
+                    
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+                    <svg class="absolute top-4 right-4 w-8 h-8 text-purple-500/20 group-hover:text-purple-500/40 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="text-4xl">👩‍🎨</div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white">Мария Соколова</h4>
+                            <p class="text-sm text-gray-400">Дизайнер</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "Стабильное соединение без обрывов. Идеально для видеозвонков и стримов. Поддержка ответила за 2 минуты, очень впечатлена!"
+                    </p>
+                    
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+                    <svg class="absolute top-4 right-4 w-8 h-8 text-purple-500/20 group-hover:text-purple-500/40 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="text-4xl">👨‍💼</div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white">Дмитрий Волков</h4>
+                            <p class="text-sm text-gray-400">Предприниматель</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "Подключил для всего офиса. Команда из 15 человек работает без проблем. Тарифный план "Бизнес" полностью оправдывает себя."
+                    </p>
+                    
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+                    <svg class="absolute top-4 right-4 w-8 h-8 text-purple-500/20 group-hover:text-purple-500/40 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="text-4xl">📹</div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white">Елена Новикова</h4>
+                            <p class="text-sm text-gray-400">Контент-мейкер</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "Загружаю видео на YouTube каждый день. Раньше это занимало часы, теперь — минуты. Лучший сервис для креаторов!"
+                    </p>
+                    
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Testimonial 5 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+                    <svg class="absolute top-4 right-4 w-8 h-8 text-purple-500/20 group-hover:text-purple-500/40 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="text-4xl">🎮</div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white">Стас Захаров</h4>
+                            <p class="text-sm text-gray-400">Геймер</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "Пинг снизился до минимума, никаких лагов в онлайн-играх. Наконец-то могу играть комфортно. Спасибо!"
+                    </p>
+                    
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+
+                <!-- Testimonial 6 -->
+                <div class="group relative p-6 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/30 border border-gray-700/50 backdrop-blur-sm hover:border-purple-500/50 transition-all duration-300 hover:scale-105">
+                    <svg class="absolute top-4 right-4 w-8 h-8 text-purple-500/20 group-hover:text-purple-500/40 transition-colors" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+                    </svg>
+                    
+                    <div class="flex items-start gap-4 mb-4">
+                        <div class="text-4xl">📊</div>
+                        <div class="flex-1">
+                            <h4 class="font-semibold text-white">Олег Давыденко</h4>
+                            <p class="text-sm text-gray-400">Маркетолог</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg class="w-4 h-4 fill-yellow-400 text-yellow-400" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        "Работаю с большими объемами данных и аналитики. Все летает! Очень удобная статистика использования в личном кабинете."
+                    </p>
+                    
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-br from-purple-600/0 to-violet-600/0 group-hover:from-purple-600/5 group-hover:to-violet-600/5 transition-all duration-300 pointer-events-none"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative py-16 px-4 border-t border-gray-800/50">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+                <!-- Brand -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-purple-600 to-violet-600 flex items-center justify-center font-bold text-white">
+                            V
+                        </div>
+                        <span class="text-xl font-bold text-white">NetrionVPS</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Быстрый и стабильный интернет для вашего бизнеса и развлечений
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Навигация</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#features" class="text-gray-400 hover:text-purple-400 transition-colors text-sm">Преимущества</a></li>
+                        <li><a href="#pricing" class="text-gray-400 hover:text-purple-400 transition-colors text-sm">Тарифы</a></li>
+                        <li><a href="#testimonials" class="text-gray-400 hover:text-purple-400 transition-colors text-sm">Отзывы</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Поддержка</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-sm">FAQ</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-sm">Документация</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-purple-400 transition-colors text-sm">Контакты</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Контакты</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-2 text-gray-400 text-sm">
+                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                            </svg>
+                            support@NetrionVPS.ru
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm">
+                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                            </svg>
+                            +7 (800) 123-45-67
+                        </li>
+                        <li class="flex items-center gap-2 text-gray-400 text-sm">
+                            <svg class="w-4 h-4 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                            Москва, Россия
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom -->
+            <div class="pt-8 border-t border-gray-800/50 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    © 2026 NetrionVPS. Все права защищены.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#" class="text-gray-500 hover:text-purple-400 transition-colors text-sm">
+                        Политика конфиденциальности
+                    </a>
+                    <a href="#" class="text-gray-500 hover:text-purple-400 transition-colors text-sm">
+                        Условия использования
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+<canvas id="snowCanvas" class="fixed top-0 left-0 w-full h-full pointer-events-none"></canvas>
+
+<script>
+const canvas = document.getElementById('snowCanvas');
+const ctx = canvas.getContext('2d');
+
+let width, height;
+let flakes = [];
+
+function resize() {
+  width = canvas.width = window.innerWidth;
+  height = canvas.height = window.innerHeight;
+}
+resize();
+window.addEventListener('resize', resize);
+
+// ❄️ создаём снежинки
+for (let i = 0; i < 80; i++) {
+  flakes.push({
+    x: Math.random() * width,
+    y: Math.random() * height,
+    size: Math.random() * 4 + 2,
+    speed: Math.random() * 0.7 + 0.3
+  });
+}
+
+// ❄️ рисуем снежинку (6 лучей)
+function drawSnowflake(x, y, size) {
+  ctx.strokeStyle = "white";
+  ctx.lineWidth = 1;
+
+  for (let i = 0; i < 6; i++) {
+    ctx.beginPath();
+    ctx.moveTo(x, y);
+    let angle = (Math.PI / 3) * i;
+    ctx.lineTo(
+      x + Math.cos(angle) * size,
+      y + Math.sin(angle) * size
+    );
+    ctx.stroke();
+  }
+}
+
+function draw() {
+  ctx.clearRect(0, 0, width, height);
+
+  flakes.forEach(f => {
+    drawSnowflake(f.x, f.y, f.size);
+
+    // движение вниз
+    f.y += f.speed;
+
+    // лёгкое покачивание
+    f.x += Math.sin(f.y * 0.01) * 0.3;
+
+    // если вышла за экран
+    if (f.y > height) {
+      f.y = -10;
+      f.x = Math.random() * width;
+    }
+  });
+}
+
+function animate() {
+  draw();
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+</body>
+</html>
